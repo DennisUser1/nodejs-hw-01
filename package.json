@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-hw-01",
+  "version": "1.0.0",
+  "description": "nodejs-hw-01",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "get-all": "node src/scripts/getAllContacts.js",
+    "generate": "node src/scripts/generateContacts.js",
+    "add-one": "node src/scripts/addOneContact.js",
+    "count": "node src/scripts/countContacts.js",
+    "remove-last": "node src/scripts/removeLastContact.js",
+    "remove-all": "node src/scripts/removeAllContacts.js",
+    "run-all": "concurrently \"npm run get-all\" \"npm run generate\" \"npm run add-one\" \"npm run count\" \"npm run remove-last\" \"npm run remove-all\"",
+    "dev": "nodemon --watch src/db/db.json --exec \"npm run run-all\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@faker-js/faker": "^9.2.0",
+    "concurrently": "^9.1.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "nodemon": "^3.1.7"
+  }
+}
